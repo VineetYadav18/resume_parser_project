@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+pdfplumber
+PyMuPDF
+python-docx
+spacy
+pandas
+sqlalchemy
+psycopg2-binary
