@@ -173,13 +173,14 @@ def dashboard_block():
     if not cs:
         st.info("No candidates yet. Upload a resume below.")
         return
-    widths = [2, 3, 1.5, 4, 1.5, 0.8]
-    for col, t in zip(st.columns(widths), ["Candidate Name", "Email", "Experience", "Key Skills", "Status", ""]):
+    widths = [2, 3, 1.5, 2, 4, 1.5, 0.8]
+    for col, t in zip(st.columns(widths), ["Candidate Name", "Email", "Experience", "Phone", "Key Skills", "Status", ""]):
         col.markdown(f'<span class="sub"><b>{t}</b></span>', unsafe_allow_html=True)
     for i, c in enumerate(list(cs)):
-        c1, c2, c3, c4, c5, c6 = st.columns(widths)
+        c1, c2, c3, cp, c4, c5, c6 = st.columns(widths)
         c1.write(c["name"])
         c2.write(c["email"])
+        cp.write(c.get("phone") or "-")
         c3.write(f'{c["experience"]} years' if c["experience"] else "-")
         extra = len(c["skills"]) - 3
         more = f'<span class="tag" style="background:#f3f4f6;color:#6b7280">+{extra}</span>' if extra > 0 else ""
