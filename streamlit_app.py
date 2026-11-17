@@ -50,9 +50,9 @@ ROLES = {
     "candidate": dict(label="Candidate", title="Candidate sign in", desc="Upload your resume and attend AI screening.",
                       nav=["Dashboard", "Resume Upload", "Settings"]),
     "recruiter": dict(label="Recruiter", title="Recruiter sign in", desc="Rank candidates, review skill gaps and run interviews.",
-                      nav=["Dashboard", "Resume Upload", "Candidates", "Job Postings", "Analytics", "Settings"]),
+                      nav=["Dashboard", "Resume Upload", "Candidates", "Settings"]),
     "admin": dict(label="Admin", title="Admin sign in", desc="View hiring analytics, approve candidates and manage reports.",
-                  nav=["Dashboard", "Candidates", "Job Postings", "Analytics", "Settings"]),
+                  nav=["Dashboard", "Candidates", "Settings"]),
 }
 ICON = {"Dashboard": "▦", "Resume Upload": "📄", "Candidates": "👥", "Job Postings": "💼",
         "Analytics": "📊", "Interview Assistant": "💬", "Settings": "⚙"}
